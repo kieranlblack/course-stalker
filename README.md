@@ -3,6 +3,7 @@ Script to check GA Tech class matrix every couple of seconds to see if positions
 ## Setting up Config
 ### Example Config
 ```yml
+# config.yml
 number: 1234567890
 sms_gateway: '@vtext.com'
 email: 'georgeburdell@gmail.com'
@@ -21,7 +22,7 @@ courses:
 | term        | current term<sup>2</sup>               |
 | courses     | list of all courses to track           |
 
-(1) For a gmail account I highly recommend generating an app password exclusively for this script. To do this go to Google Account > Security > Signing in to Google > App passwords. [Guide here](https://support.google.com/mail/answer/185833). \
+(1) For gmail generate an app password exclusively for this script. To do this go to Google Account > Security > Signing in to Google > App passwords. [Guide here](https://support.google.com/mail/answer/185833). \
 (2) To find the current term go to oscar > Registration > Select Term. Open the developer console (f12) and navigate to the Network tab, ensure that network activity is being recorded then select the current term and click submit. In the activity on the Network tab there should be something with the name of `bwcklibs.P_StoreTerm`. Click on this and then scroll down in the Headers to find the form data. The number you want is the one right after `term_in`.
 
 ## Notes

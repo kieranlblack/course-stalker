@@ -7,9 +7,8 @@ import time
 
 number = config['number']
 
-notified = False
-
-if __name__ == '__main__':
+def main():
+    notified = False
     watched_courses = list()
 
     for course in config['courses']:
@@ -49,3 +48,11 @@ if __name__ == '__main__':
                 
 
         time.sleep(3)
+
+if __name__ == '__main__':
+    try:
+        main()
+    except:
+        notifier.send_sms(number, 'PROGRAM CRASHED!')
+        notifier.notify_desktop('PROGRAM CRASHED!')
+        main()
